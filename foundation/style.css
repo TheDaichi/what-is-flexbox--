@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  padding: 30px;
+  /* width: 33.333%; */
+}
+
+.box1 { background: #1abc9c; }
+.box2 { background: #3498db; }
+.box3 { background: #9b59b6; }
+.box4 { background: #34495e; }
+.box5 { background: #f1c40f; }
+.box6 { background: #e67e22; }
+
+/*
+* flex-direction: row
+* Main Axis left<---------------->right
+* Cross Axis Top to bottom
+* flex-directoin: column
+* Main Axis top to bottom
+* Cross Axis left<--------------->right
+*/
+
+container {
+  display: flex;
+  /* border: 2px solid goldenrod; */
+  /* height: 100vh; */
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+
+/* .box {
+  flex: 1;
+  order: 1;
+}
+
+.box2 {
+  order: 2;
+}
+
+.box6 {
+  order: -1;
+} */
+
+
+/* Alignment and Centering */
+
+container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* flex-end, flex-start*, center, space-around, space-between, space-evenly */
+  min-height: 100vh; /* flex-direction: column; */
+}
+
+/*
+* justify-content(align along main axis) depends upon on flex-direction
+* flex-direction: row(default) (Main Axis: left to right)
+*   - flex-items align according to the width and wrap property
+* flex-direction: column(Main Axis: top to bottom)
+*   flex-items appear same in space-between or space-around
+*   - we need to give height and manipulate flex-items width
+*/
+
+
+container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center; /* flex-end, flex-start, center, stretch*, baseline */
+}
+
+/*
+* align-items(align along cross axis)
+*/
+
+container {
+  display: flex;
+  height: 100vh;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+/*
+* align-content (cross-axis) alignment and wrap is important
+*/
+
+container {
+  display: flex;
+  height: 100vh;
+  align-items: flex-start;
+}
+
+/* .box2 {
+  align-self: center;
+}
+
+.box3 {
+  align-self: flex-end;
+} */
+
+/* flex property */
+/*
+* width of flex-items by default auto
+* flex at waht propotion should flex-items scale up or down,
+* when we have extra or not enoungh space
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+/* .box {
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+} */
+
+/*
+.box1 {
+  flex: 2;
+} */
+
+.box {
+  flex-basis: 200px;
+  flex-grow: 1; /* default 0 */
+}
+
+.box2 {
+  flex-grow: 5;
+  flex-basis: 400px;
+}
+
+/* .box2 {
+  flex-basis: 500px;
+  flex-grow: 0;
+  flex-shrink: 2; /* default 1 */
+/*} */
+
+/* flex: flex-grow flex-shrink felx-basis */
+
+
+
+
+
+
+
+
